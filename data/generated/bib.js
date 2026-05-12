@@ -1,4 +1,5 @@
-var bibEntries = {
+// 定义SurVis期望的变量名：bib
+var bib = {
     "Agrawal2022": {
         "abstract": "",
         "authors": ["Agrawal, Kushagra", "Alladi, Tejasvi", "Agrawal, Ayush"],
@@ -32,3 +33,6 @@ var bibEntries = {
         "keywords": ["intrusion detection", "IoV security", "deep learning"]
     }
 };
+
+// 兼容之前的写法，同时定义bibEntries
+var bibEntries = bib;
