@@ -1,41 +1,52 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra-Vehicle Network IDS Literature</title>
 
-    <script type="text/javascript" src="js/lib/bibtex_js.js"></script>
-    <script type="text/javascript" src="js/lib/FileSaver.js"></script>
-    <script type="text/javascript" src="js/lib/codemirror.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery.tooltipster.js"></script>
-    <script type="text/javascript" src="js/lib/figue.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <!-- 核心依赖（必须用v3，绝对不能改版本） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
 
-    <script type="text/javascript" src="data/generated/bib.js"></script>
-    <script type="text/javascript" src="data/generated/available_pdf.js"></script>
-    <script type="text/javascript" src="data/generated/available_img.js"></script>
-    <script type="text/javascript" src="data/search_stopwords.js"></script>
-    <script type="text/javascript" src="data/tag_categories.js"></script>
-    <script type="text/javascript" src="data/authorized_tags.js"></script>
+    <!-- 样式文件（必须全部引用，否则页面无样式） -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/entries.css">
+    <link rel="stylesheet" href="styles/selector.css">
+    <link rel="stylesheet" href="styles/timeline.css">
+    <link rel="stylesheet" href="styles/sparkline.css">
+    <link rel="stylesheet" href="styles/tooltipster/tooltipster.css">
 
-    <script type="text/javascript" src="properties.js"></script>
-    <script type="text/javascript" src="js/survis.js"></script>
-    <script type="text/javascript" src="js/util.js"></script>
-    <script type="text/javascript" src="js/warnings.js"></script>
-    <script type="text/javascript" src="js/bib.js"></script>
-    <script type="text/javascript" src="js/selectors.js"></script>
-    <script type="text/javascript" src="js/references.js"></script>
-    <script type="text/javascript" src="js/clustering.js"></script>
-    <script type="text/javascript" src="js/stats.js"></script>
-    <script type="text/javascript" src="js/tags.js"></script>
-    <script type="text/javascript" src="js/page.js"></script>
-    <script type="text/javascript" src="js/entry_layout.js"></script>
-    <script type="text/javascript" src="js/timeline.js"></script>
+    <!-- 第三方库（只留3个必须的） -->
+    <script src="js/lib/figue.js"></script>
+    <script src="js/lib/FileSaver.js"></script>
+    <script src="js/lib/jquery.tooltipster.js"></script>
 </head>
 
 <body>
-</body>
+    <!-- 核心DOM容器（必须有，否则论文没地方渲染） -->
+    <div id="visualization"></div>
+    <div id="entries"></div>
 
+    <!-- 严格按官方顺序加载，绝对不能改顺序！ -->
+    <script src="properties.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/warnings.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/references.js"></script>
+    <script src="js/tags.js"></script>
+    <script src="js/clustering.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/entry_layout.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/selectors.js"></script>
+
+    <!-- 数据文件（只加载generated里的自定义数据） -->
+    <script src="data/generated/bib.js"></script>
+    <script src="data/generated/available_pdf.js"></script>
+    <script src="data/generated/available_img.js"></script>
+
+    <!-- 最后启动应用（必须放在所有文件最后） -->
+    <script src="js/survis.js"></script>
+</body>
 </html>
