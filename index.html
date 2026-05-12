@@ -4,46 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intra-Vehicle Network IDS Literature</title>
-
-    <!-- 核心依赖（必须用v3，绝对不能改版本） -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
-
-    <!-- 样式文件（必须全部引用，否则页面无样式） -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/entries.css">
     <link rel="stylesheet" href="styles/selector.css">
     <link rel="stylesheet" href="styles/timeline.css">
     <link rel="stylesheet" href="styles/sparkline.css">
     <link rel="stylesheet" href="styles/tooltipster/tooltipster.css">
-
-    <!-- 第三方库（只留3个必须的） -->
     <script src="js/lib/figue.js"></script>
     <script src="js/lib/FileSaver.js"></script>
     <script src="js/lib/jquery.tooltipster.js"></script>
 </head>
 <body>
-    <!-- 核心DOM容器（必须有，否则论文没地方渲染） -->
     <div id="visualization"></div>
     <div id="entries"></div>
 
-    <!-- 🔥 终极修复：自动检测变量名 + 强制预处理 -->
+    <!-- 正确顺序：先加载配置 → 再加载数据 -->
+    <script src="properties.js"></script>
     <script src="data/generated/bib.js"></script>
-    <script>
-        // 1. 自动检测bib数据，兼容bib.js里的任何变量名
-        var bibData = window.bib || window.bibEntries;
-        
-        // 2. 强制给所有论文加上空对象格式的keywords，彻底解决undefined错误
-        for (var key in bibData) {
-            if (!bibData[key].keywords || typeof bibData[key].keywords !== 'object') {
-                bibData[key].keywords = {};
-            }
-        }
-        // 3. 同时定义两个变量，兼容所有SurVis代码
-        window.bib = bibData;
-        window.bibEntries = bibData;
 
-        // 4. 强制覆盖properties.js的tagCloudOptions，彻底关闭keywords标签云
+    <!-- 最后执行修复：覆盖配置、补全keywords -->
+    <script>
+        var bibData = window.bibEntries;
+        // 强制给所有论文添加空keywords对象
+        for (var key in bibData) {
+            bibData[key].keywords = {};
+        }
+        // 定义全局bib变量
+        window.bib = bibData;
+        // 强制覆盖标签云配置（不会被覆盖）
         window.tagCloudOptions = [{
             field: 'author',
             title: 'Authors',
@@ -51,8 +41,7 @@
         }];
     </script>
 
-    <!-- 严格按官方顺序加载，绝对不能改顺序！ -->
-    <script src="properties.js"></script>
+    <!-- 最后加载所有业务JS -->
     <script src="js/util.js"></script>
     <script src="js/warnings.js"></script>
     <script src="js/stats.js"></script>
@@ -63,12 +52,8 @@
     <script src="js/entry_layout.js"></script>
     <script src="js/page.js"></script>
     <script src="js/selectors.js"></script>
-
-    <!-- 数据文件（已经提前加载并预处理过了） -->
     <script src="data/generated/available_pdf.js"></script>
     <script src="data/generated/available_img.js"></script>
-
-    <!-- 最后启动应用（必须放在所有文件最后） -->
     <script src="js/survis.js"></script>
 </body>
 </html>
