@@ -1,4 +1,3 @@
-// 定义SurVis期望的变量名：bib
 var bib = {
     "Agrawal2022": {
         "abstract": "",
@@ -14,7 +13,11 @@ var bib = {
         "url": "http://dx.doi.org/10.1109/TITS.2022.3146024",
         "volume": "23",
         "year": 2022,
-        "keywords": ["intrusion detection", "vehicle security", "deep learning"]
+        "keywords": ["intrusion detection", "vehicle security", "deep learning"],
+        "id": "Agrawal2022", // 加上id字段，值和key一致
+        "key": "Agrawal2022", // 加上key字段，值和key一致
+        "publicationKey": "Agrawal2022", // 加上publicationKey字段
+        "selectorIDs": [] // 加上selectorIDs字段，空数组即可
     },
     "Ahmed2023": {
         "abstract": "",
@@ -30,9 +33,12 @@ var bib = {
         "url": "http://dx.doi.org/10.1109/MCE.2021.3139170",
         "volume": "12",
         "year": 2023,
-        "keywords": ["intrusion detection", "IoV security", "deep learning"]
+        "keywords": ["intrusion detection", "IoV security", "deep learning"],
+        "id": "Ahmed2023",
+        "key": "Ahmed2023",
+        "publicationKey": "Ahmed2023",
+        "selectorIDs": []
     }
 };
 
-// 兼容之前的写法，同时定义bibEntries
 var bibEntries = bib;
