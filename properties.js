@@ -2,13 +2,13 @@
  * Name as used as title for the main page
  * @type {string}
  */
-var title = 'SurVis Literature Collection';
+var title = 'Intra-Vehicle Network Intrusion Detection'; // ✅ 必须改1：替换成你的文献综述主题
 
 /**
  * Relative path to the data directory
  * @type {string}
  */
-var dataDir = 'data/';
+var dataDir = 'data/generated/'; // ✅ 必须改2：最核心！你的所有数据都在generated子文件夹里，原来的路径会导致找不到bib.js
 
 /**
  * Relative path to the js directory
@@ -37,25 +37,21 @@ var tagCloudOptions = [{
     field: 'author',
     title: 'Authors',
     minTagFrequency: 1
-}, {
-    field: 'series',
-    title: 'Series',
-    minTagFrequency: 1
-}];
+}]; // ✅ 必须改3：删掉最后一个series字段，你的bib里没有这个字段，会导致标签云生成失败
 
 /**
  * If BibTeX entries (and tags) should be editable
  * @type {boolean}
  */
-var editable = true;
+var editable = false; // ✅ 必须改4：作业用关闭编辑功能，避免别人修改，也不会加载多余的编辑器代码
 
 /**
  * Subtitle describing the paper the data is referring to (set to null to deactivate)
  * @type {{html: string, id: string}}
  */
 var paper = {
-    html: 'Sample literature collection for <b><a href="http://www.visus.uni-stuttgart.de/uploads/tx_vispublications/eurovis14-star.pdf" target="_blank">SurVis</a></b>',
-    id: 'Beck2016Visual'
+    html: '20 Papers on Deep Learning-based Cybersecurity', // 可选改：替换成你的副标题
+    id: '' // 必须清空原来的样例id
 };
 
 /**
