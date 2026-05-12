@@ -27,17 +27,28 @@
     <div id="visualization"></div>
     <div id="entries"></div>
 
-    <!-- 🔥 终极修复：提前加载并预处理数据，绕过所有缓存 -->
+    <!-- 🔥 终极修复：自动检测变量名 + 强制预处理 -->
     <script src="data/generated/bib.js"></script>
     <script>
-        // 强制给所有论文加上空的keywords字段，彻底解决undefined错误
-        for (var key in bibEntries) {
-            if (!bibEntries[key].keywords) {
-                bibEntries[key].keywords = "";
+        // 1. 自动检测bib数据，兼容bib.js里的任何变量名
+        var bibData = window.bib || window.bibEntries;
+        
+        // 2. 强制给所有论文加上空对象格式的keywords，彻底解决undefined错误
+        for (var key in bibData) {
+            if (!bibData[key].keywords || typeof bibData[key].keywords !== 'object') {
+                bibData[key].keywords = {};
             }
         }
-        // 同时定义bib变量，满足timeline.js的要求
-        window.bib = bibEntries;
+        // 3. 同时定义两个变量，兼容所有SurVis代码
+        window.bib = bibData;
+        window.bibEntries = bibData;
+
+        // 4. 强制覆盖properties.js的tagCloudOptions，彻底关闭keywords标签云
+        window.tagCloudOptions = [{
+            field: 'author',
+            title: 'Authors',
+            minTagFrequency: 1
+        }];
     </script>
 
     <!-- 严格按官方顺序加载，绝对不能改顺序！ -->
