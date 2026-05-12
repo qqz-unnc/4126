@@ -55,5 +55,35 @@
     <script src="data/generated/available_pdf.js"></script>
     <script src="data/generated/available_img.js"></script>
     <script src="js/survis.js"></script>
+
+    <!-- ============================================== -->
+    <!-- 🔥 终极强制渲染脚本：解决数据不显示问题 -->
+    <!-- ============================================== -->
+    <script>
+        window.addEventListener('load', function() {
+            // 等待所有资源加载完成
+            setTimeout(() => {
+                if (typeof bibEntries === 'undefined') {
+                    console.error("❌ 未找到论文数据");
+                    return;
+                }
+
+                // 强制注入数据
+                if (typeof References !== 'undefined') {
+                    References.data = bibEntries;
+                    References.list = Object.values(bibEntries);
+                }
+
+                // 强制渲染所有模块
+                if (typeof Page !== 'undefined') Page.render();
+                if (typeof Timeline !== 'undefined') Timeline.render();
+                if (typeof Clustering !== 'undefined') Clustering.render();
+                if (typeof Selectors !== 'undefined') Selectors.render();
+
+                console.log(`✅ 成功加载 ${Object.keys(bibEntries).length} 篇论文！`);
+                alert(`✅ 成功加载 ${Object.keys(bibEntries).length} 篇论文！页面已刷新`);
+            }, 500);
+        });
+    </script>
 </body>
 </html>
