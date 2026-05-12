@@ -20,57 +20,17 @@
     <div id="visualization"></div>
     <div id="entries"></div>
 
+    <!-- 1. 加载配置文件 -->
     <script src="properties.js"></script>
 
+    <!-- 2. 兜底防护：防止undefined/null报错 -->
     <script>
-        // 1. 兜底防护：防止undefined/null报错
         var originalKeys = Object.keys;
         Object.keys = function(obj) {
             return (obj === null || obj === undefined) ? [] : originalKeys(obj);
         };
 
-        // 2. 内嵌论文数据（格式完全符合SurVis要求）
-        var bibEntries = {
-            "Agrawal2022": {
-                "abstract": "",
-                "authors": ["Agrawal, Kushagra", "Alladi, Tejasvi", "Agrawal, Ayush"],
-                "doi": "10.1109/tits.2022.3146024",
-                "journal": "IEEE Transactions on Intelligent Transportation Systems",
-                "month": "Nov",
-                "number": "11",
-                "pages": "22596-22606",
-                "publisher": "IEEE",
-                "title": "NovelADS: A Novel Anomaly Detection System for Intra-Vehicular Networks",
-                "type": "article",
-                "url": "http://dx.doi.org/10.1109/TITS.2022.3146024",
-                "volume": "23",
-                "year": 2022,
-                "keywords": ["intrusion detection", "vehicle security", "deep learning"]
-            },
-            "Ahmed2023": {
-                "abstract": "",
-                "authors": ["Ahmed, Imran", "Jeon, Gwanggil", "Ahmad, Awais"],
-                "doi": "10.1109/mce.2021.3139170",
-                "journal": "IEEE Consumer Electronics Magazine",
-                "month": "Jan",
-                "number": "1",
-                "pages": "117-123",
-                "publisher": "IEEE",
-                "title": "Deep Learning-Based Intrusion Detection System for Internet of Vehicles",
-                "type": "article",
-                "url": "http://dx.doi.org/10.1109/MCE.2021.3139170",
-                "volume": "12",
-                "year": 2023,
-                "keywords": ["intrusion detection", "IoV security", "deep learning"]
-            }
-            // 其他论文可以按这个格式继续添加
-        };
-
-        // 3. 定义全局变量
-        window.bib = bibEntries;
-        window.bibEntries = bibEntries;
-
-        // 4. 锁死标签云配置（只显示作者）
+        // 覆盖标签云配置（只显示作者）
         window.tagCloudOptions = [{
             field: 'author',
             title: 'Authors',
@@ -78,6 +38,10 @@
         }];
     </script>
 
+    <!-- 3. 按SurVis原生流程加载论文数据 -->
+    <script src="data/generated/bib.js"></script>
+
+    <!-- 4. 加载其他脚本 -->
     <script src="js/util.js"></script>
     <script src="js/warnings.js"></script>
     <script src="js/stats.js"></script>
