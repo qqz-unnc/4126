@@ -1,1 +1,1 @@
-const availablePdf = [];
+var availablePdf = [];
