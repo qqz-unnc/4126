@@ -14,10 +14,13 @@ var bib = {
         "volume": "23",
         "year": 2022,
         "keywords": ["intrusion detection", "vehicle security", "deep learning"],
-        "id": "Agrawal2022", // 加上id字段，值和key一致
-        "key": "Agrawal2022", // 加上key字段，值和key一致
-        "publicationKey": "Agrawal2022", // 加上publicationKey字段
-        "selectorIDs": [] // 加上selectorIDs字段，空数组即可
+        "id": "Agrawal2022",
+        "key": "Agrawal2022",
+        "publicationKey": "Agrawal2022",
+        "selectorIDs": [],
+        "read": false,
+        "marked": false,
+        "color": null
     },
     "Ahmed2023": {
         "abstract": "",
@@ -37,7 +40,10 @@ var bib = {
         "id": "Ahmed2023",
         "key": "Ahmed2023",
         "publicationKey": "Ahmed2023",
-        "selectorIDs": []
+        "selectorIDs": [],
+        "read": false,
+        "marked": false,
+        "color": null
     }
 };
 
