@@ -4,84 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intra-Vehicle Network IDS Literature</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/entries.css">
-    <link rel="stylesheet" href="styles/selector.css">
-    <link rel="stylesheet" href="styles/timeline.css">
-    <link rel="stylesheet" href="styles/sparkline.css">
-    <link rel="stylesheet" href="styles/tooltipster/tooltipster.css">
-    <script src="js/lib/figue.js"></script>
-    <script src="js/lib/FileSaver.js"></script>
-    <script src="js/lib/jquery.tooltipster.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        li { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        h1, h3 { text-align: center; }
+    </style>
 </head>
 <body>
-    <div id="visualization"></div>
-    <div id="entries"></div>
+    <h1>Intra-Vehicle Network Intrusion Detection</h1>
+    <h3>Paper List (Direct Render - SurVis Bypass)</h3>
+    <ul id="paperList" style="list-style: none; padding: 0;"></ul>
 
-    <!-- 1. 加载配置文件 -->
-    <script src="properties.js"></script>
-
-    <!-- 2. 兜底防护：防止undefined/null报错 -->
-    <script>
-        var originalKeys = Object.keys;
-        Object.keys = function(obj) {
-            return (obj === null || obj === undefined) ? [] : originalKeys(obj);
-        };
-
-        // 覆盖标签云配置（只显示作者）
-        window.tagCloudOptions = [{
-            field: 'author',
-            title: 'Authors',
-            minTagFrequency: 1
-        }];
-    </script>
-
-    <!-- 3. 先加载论文数据（必须在survis.js之前） -->
+    <!-- Load literature data file -->
     <script src="data/generated/bib.js"></script>
 
-    <!-- 4. 加载其他脚本 -->
-    <script src="js/util.js"></script>
-    <script src="js/warnings.js"></script>
-    <script src="js/stats.js"></script>
-    <script src="js/references.js"></script>
-    <script src="js/tags.js"></script>
-    <script src="js/clustering.js"></script>
-    <script src="js/timeline.js"></script>
-    <script src="js/entry_layout.js"></script>
-    <script src="js/page.js"></script>
-    <script src="js/selectors.js"></script>
-    <script src="data/generated/available_pdf.js"></script>
-    <script src="data/generated/available_img.js"></script>
-    <script src="js/survis.js"></script>
-
-    <!-- ============================================== -->
-    <!-- 🔥 终极强制渲染脚本：解决数据不显示问题 -->
-    <!-- ============================================== -->
+    <!-- Render paper list with native JavaScript -->
     <script>
         window.addEventListener('load', function() {
-            // 等待所有资源加载完成
             setTimeout(() => {
                 if (typeof bibEntries === 'undefined') {
-                    console.error("❌ 未找到论文数据");
+                    document.body.innerHTML = "<h1>Data Not Found</h1>";
                     return;
                 }
 
-                // 强制注入数据
-                if (typeof References !== 'undefined') {
-                    References.data = bibEntries;
-                    References.list = Object.values(bibEntries);
-                }
+                const paperList = document.getElementById('paperList');
+                const papers = Object.values(bibEntries);
+                document.querySelector('h3').textContent = `Total Papers Loaded: ${papers.length}`;
 
-                // 强制渲染所有模块
-                if (typeof Page !== 'undefined') Page.render();
-                if (typeof Timeline !== 'undefined') Timeline.render();
-                if (typeof Clustering !== 'undefined') Clustering.render();
-                if (typeof Selectors !== 'undefined') Selectors.render();
-
-                console.log(`✅ 成功加载 ${Object.keys(bibEntries).length} 篇论文！`);
-                alert(`✅ 成功加载 ${Object.keys(bibEntries).length} 篇论文！页面已刷新`);
+                papers.forEach(paper => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <h4>${paper.title}</h4>
+                        <p><strong>Authors:</strong> ${paper.authors.join(', ')}</p>
+                        <p><strong>Year:</strong> ${paper.year} | <strong>Journal:</strong> ${paper.journal || paper.booktitle || 'Conference'}</p>
+                        <p><a href="${paper.url}" target="_blank">View Paper</a></p>
+                    `;
+                    paperList.appendChild(li);
+                });
             }, 500);
         });
     </script>
