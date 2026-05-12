@@ -23,39 +23,54 @@
     <script src="properties.js"></script>
 
     <script>
-        // 1. 重写Object.keys，兜底防护
+        // 1. 兜底防护：防止undefined/null报错
         var originalKeys = Object.keys;
         Object.keys = function(obj) {
             return (obj === null || obj === undefined) ? [] : originalKeys(obj);
         };
 
-        // 2. 内嵌论文数据（语法极简，无多余逗号）
+        // 2. 内嵌论文数据（格式完全符合SurVis要求）
         var bibEntries = {
             "Agrawal2022": {
                 "abstract": "",
-                "author": "Agrawal, Kushagra",
-                "title": "NovelADS",
-                "year": 2022
+                "authors": ["Agrawal, Kushagra", "Alladi, Tejasvi", "Agrawal, Ayush"],
+                "doi": "10.1109/tits.2022.3146024",
+                "journal": "IEEE Transactions on Intelligent Transportation Systems",
+                "month": "Nov",
+                "number": "11",
+                "pages": "22596-22606",
+                "publisher": "IEEE",
+                "title": "NovelADS: A Novel Anomaly Detection System for Intra-Vehicular Networks",
+                "type": "article",
+                "url": "http://dx.doi.org/10.1109/TITS.2022.3146024",
+                "volume": "23",
+                "year": 2022,
+                "keywords": ["intrusion detection", "vehicle security", "deep learning"]
             },
             "Ahmed2023": {
                 "abstract": "",
-                "author": "Ahmed, Imran",
-                "title": "Deep Learning-Based IDS",
-                "year": 2023
+                "authors": ["Ahmed, Imran", "Jeon, Gwanggil", "Ahmad, Awais"],
+                "doi": "10.1109/mce.2021.3139170",
+                "journal": "IEEE Consumer Electronics Magazine",
+                "month": "Jan",
+                "number": "1",
+                "pages": "117-123",
+                "publisher": "IEEE",
+                "title": "Deep Learning-Based Intrusion Detection System for Internet of Vehicles",
+                "type": "article",
+                "url": "http://dx.doi.org/10.1109/MCE.2021.3139170",
+                "volume": "12",
+                "year": 2023,
+                "keywords": ["intrusion detection", "IoV security", "deep learning"]
             }
-            // 其他论文可以后续补，先保证文件解析成功
+            // 其他论文可以按这个格式继续添加
         };
 
-        // 3. 强制补全keywords
-        for (var key in bibEntries) {
-            bibEntries[key].keywords = {};
-        }
-
-        // 4. 定义全局变量
+        // 3. 定义全局变量
         window.bib = bibEntries;
         window.bibEntries = bibEntries;
 
-        // 5. 锁死标签云配置
+        // 4. 锁死标签云配置（只显示作者）
         window.tagCloudOptions = [{
             field: 'author',
             title: 'Authors',
