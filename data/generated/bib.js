@@ -1,4 +1,4 @@
-﻿const generatedBibEntries = {
+﻿var bibEntries = {
     "Agrawal2022": {
         "abstract": "",
         "author": "Agrawal, Kushagra and Alladi, Tejasvi and Agrawal, Ayush and Chamola, Vinay and Benslimane, Abderrahim",
