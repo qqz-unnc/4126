@@ -293,3 +293,4 @@ var bibEntries = {
         "year": 2023
     }
 };
+var bib = bibEntries;
