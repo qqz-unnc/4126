@@ -13,7 +13,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TITS.2022.3146024",
         "volume": "23",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Ahmed2023": {
         "abstract": "",
@@ -29,7 +30,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/MCE.2021.3139170",
         "volume": "12",
-        "year": 2023
+        "year": 2023,
+        "keywords": ""
     },
     "AlJarrah2019": {
         "abstract": "",
@@ -43,7 +45,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/ACCESS.2019.2894183",
         "volume": "7",
-        "year": 2019
+        "year": 2019,
+        "keywords": ""
     },
     "AlJarrah2023": {
         "abstract": "",
@@ -57,7 +60,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/OJVT.2023.3237802",
         "volume": "4",
-        "year": 2023
+        "year": 2023,
+        "keywords": ""
     },
     "Aldhyani2022": {
         "abstract": "",
@@ -73,7 +77,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.3390/s22010360",
         "volume": "22",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Alkhatib2021": {
         "abstract": "",
@@ -86,7 +91,8 @@ var bibEntries = {
         "title": "SOME/IP Intrusion Detection using Deep Learning-based Sequential Models in Automotive Ethernet Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/IEMCON53756.2021.9623129",
-        "year": 2021
+        "year": 2021,
+        "keywords": ""
     },
     "Alkhatib2022": {
         "abstract": "",
@@ -99,7 +105,8 @@ var bibEntries = {
         "title": "Unsupervised Network Intrusion Detection System for AVTP in Automotive Ethernet Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/IV51971.2022.9827285",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Alqahtani2022": {
         "abstract": "",
@@ -114,7 +121,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.compeleceng.2022.108447",
         "volume": "104",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Ashraf2021": {
         "abstract": "",
@@ -130,7 +138,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TITS.2020.3017882",
         "volume": "22",
-        "year": 2021
+        "year": 2021,
+        "keywords": ""
     },
     "Avatefipour2019": {
         "abstract": "",
@@ -144,7 +153,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/ACCESS.2019.2937576",
         "volume": "7",
-        "year": 2019
+        "year": 2019,
+        "keywords": ""
     },
     "Cheng2023": {
         "abstract": "",
@@ -159,7 +169,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.future.2022.10.020",
         "volume": "140",
-        "year": 2023
+        "year": 2023,
+        "keywords": ""
     },
     "Cherdo2023": {
         "abstract": "",
@@ -175,7 +186,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.3390/s23115013",
         "volume": "23",
-        "year": 2023
+        "year": 2023,
+        "keywords": ""
     },
     "Cuzzocrea2020": {
         "abstract": "",
@@ -189,7 +201,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.procs.2020.09.203",
         "volume": "176",
-        "year": 2020
+        "year": 2020,
+        "keywords": ""
     },
     "Desta2020a": {
         "abstract": "",
@@ -204,7 +217,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.2197/ipsjjip.28.611",
         "volume": "28",
-        "year": 2020
+        "year": 2020,
+        "keywords": ""
     },
     "Desta2020b": {
         "abstract": "",
@@ -217,7 +231,8 @@ var bibEntries = {
         "title": "MLIDS: Handling Raw High-Dimensional CAN Bus Data Using Long Short-Term Memory Networks for Intrusion Detection in In-Vehicle Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/ITNAC50341.2020.9315024",
-        "year": 2020
+        "year": 2020,
+        "keywords": ""
     },
     "Desta2022": {
         "abstract": "",
@@ -232,7 +247,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.vehcom.2022.100470",
         "volume": "35",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Dixit2022": {
         "abstract": "",
@@ -248,7 +264,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1111/exsy.12754",
         "volume": "39",
-        "year": 2022
+        "year": 2022,
+        "keywords": ""
     },
     "Fowler2019": {
         "abstract": "",
@@ -261,7 +278,8 @@ var bibEntries = {
         "title": "A Method for Constructing Automotive Cybersecurity Tests, a CAN Fuzz Testing Example",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/QRS-C.2019.00015",
-        "year": 2019
+        "year": 2019,
+        "keywords": ""
     },
     "Han2021": {
         "abstract": "",
@@ -276,7 +294,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.vehcom.2021.100374",
         "volume": "31",
-        "year": 2021
+        "year": 2021,
+        "keywords": ""
     },
     "Han2023": {
         "abstract": "",
@@ -290,7 +309,8 @@ var bibEntries = {
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TIFS.2022.3221893",
         "volume": "18",
-        "year": 2023
+        "year": 2023,
+        "keywords": ""
     }
 };
 var bib = bibEntries;
