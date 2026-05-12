@@ -23,8 +23,9 @@
     <!-- 先加载配置 -->
     <script src="properties.js"></script>
 
-    <!-- 🔥 把 bib 数据直接内嵌，彻底消除路径/加载问题 -->
+    <!-- 🔥 把所有逻辑合并在同一个script里，按顺序执行 -->
     <script>
+        // 1. 定义论文数据
         var bibEntries = {
             "Agrawal2022": {
                 "abstract": "",
@@ -320,18 +321,17 @@
                 "year": 2023
             }
         };
-        // 同时定义两个变量，兼容所有SurVis代码
-        window.bib = bibEntries;
-        window.bibEntries = bibEntries;
-    </script>
 
-    <!-- 🔥 修复循环：强制补全 keywords，最后覆盖配置 -->
-    <script>
-        // 强制给所有论文加上空对象格式的keywords
+        // 2. 立刻给所有论文加上空对象格式的keywords（无任何延迟）
         for (var key in bibEntries) {
             bibEntries[key].keywords = {};
         }
-        // 强制关闭keywords标签云（不会被任何文件冲掉）
+
+        // 3. 同时定义两个变量，兼容所有SurVis代码
+        window.bib = bibEntries;
+        window.bibEntries = bibEntries;
+
+        // 4. 强制关闭keywords标签云（最后执行，不会被冲掉）
         window.tagCloudOptions = [{
             field: 'author',
             title: 'Authors',
