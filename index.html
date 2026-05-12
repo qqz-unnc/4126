@@ -22,11 +22,23 @@
     <script src="js/lib/FileSaver.js"></script>
     <script src="js/lib/jquery.tooltipster.js"></script>
 </head>
-
 <body>
     <!-- 核心DOM容器（必须有，否则论文没地方渲染） -->
     <div id="visualization"></div>
     <div id="entries"></div>
+
+    <!-- 🔥 终极修复：提前加载并预处理数据，绕过所有缓存 -->
+    <script src="data/generated/bib.js"></script>
+    <script>
+        // 强制给所有论文加上空的keywords字段，彻底解决undefined错误
+        for (var key in bibEntries) {
+            if (!bibEntries[key].keywords) {
+                bibEntries[key].keywords = "";
+            }
+        }
+        // 同时定义bib变量，满足timeline.js的要求
+        window.bib = bibEntries;
+    </script>
 
     <!-- 严格按官方顺序加载，绝对不能改顺序！ -->
     <script src="properties.js"></script>
@@ -41,8 +53,7 @@
     <script src="js/page.js"></script>
     <script src="js/selectors.js"></script>
 
-    <!-- 数据文件（只加载generated里的自定义数据） -->
-    <script src="data/generated/bib.js"></script>
+    <!-- 数据文件（已经提前加载并预处理过了） -->
     <script src="data/generated/available_pdf.js"></script>
     <script src="data/generated/available_img.js"></script>
 
