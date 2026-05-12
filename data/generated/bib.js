@@ -1,4 +1,4 @@
-﻿var bibEntries = {
+var bibEntries = {
     "Agrawal2022": {
         "abstract": "",
         "author": "Agrawal, Kushagra and Alladi, Tejasvi and Agrawal, Ayush and Chamola, Vinay and Benslimane, Abderrahim",
@@ -9,12 +9,11 @@
         "number": "11",
         "pages": "22596-22606",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "NovelADS: A Novel Anomaly Detection System for Intra-Vehicular Networks",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TITS.2022.3146024",
         "volume": "23",
-        "year": "2022"
+        "year": 2022
     },
     "Ahmed2023": {
         "abstract": "",
@@ -26,12 +25,11 @@
         "number": "1",
         "pages": "117-123",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "Deep Learning-Based Intrusion Detection System for Internet of Vehicles",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/MCE.2021.3139170",
         "volume": "12",
-        "year": "2023"
+        "year": 2023
     },
     "AlJarrah2019": {
         "abstract": "",
@@ -41,12 +39,11 @@
         "journal": "IEEE Access",
         "pages": "21266-21289",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "Intrusion Detection Systems for Intra-Vehicle Networks: A Review",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/ACCESS.2019.2894183",
         "volume": "7",
-        "year": "2019"
+        "year": 2019
     },
     "AlJarrah2023": {
         "abstract": "",
@@ -56,12 +53,11 @@
         "journal": "IEEE Open Journal of Vehicular Technology",
         "pages": "271-280",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "A Novel Detection Approach of Unknown Cyber-Attacks for Intra-Vehicle Networks Using Recurrence Plots and Neural Networks",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/OJVT.2023.3237802",
         "volume": "4",
-        "year": "2023"
+        "year": 2023
     },
     "Aldhyani2022": {
         "abstract": "",
@@ -73,12 +69,11 @@
         "number": "1",
         "pages": "360",
         "publisher": "MDPI AG",
-        "series": "",
         "title": "Attacks to Automatous Vehicles: A Deep Learning Algorithm for Cybersecurity",
         "type": "article",
         "url": "http://dx.doi.org/10.3390/s22010360",
         "volume": "22",
-        "year": "2022"
+        "year": 2022
     },
     "Alkhatib2021": {
         "abstract": "",
@@ -88,11 +83,10 @@
         "month": "Oct",
         "pages": "954-962",
         "publisher": "IEEE",
-        "series": "",
         "title": "SOME/IP Intrusion Detection using Deep Learning-based Sequential Models in Automotive Ethernet Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/IEMCON53756.2021.9623129",
-        "year": "2021"
+        "year": 2021
     },
     "Alkhatib2022": {
         "abstract": "",
@@ -102,11 +96,10 @@
         "month": "June",
         "pages": "1731-1738",
         "publisher": "IEEE",
-        "series": "",
         "title": "Unsupervised Network Intrusion Detection System for AVTP in Automotive Ethernet Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/IV51971.2022.9827285",
-        "year": "2022"
+        "year": 2022
     },
     "Alqahtani2022": {
         "abstract": "",
@@ -117,12 +110,11 @@
         "month": "Dec",
         "pages": "108447",
         "publisher": "Elsevier BV",
-        "series": "",
         "title": "A deep learning-based intrusion detection system for in-vehicle networks",
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.compeleceng.2022.108447",
         "volume": "104",
-        "year": "2022"
+        "year": 2022
     },
     "Ashraf2021": {
         "abstract": "",
@@ -134,12 +126,11 @@
         "number": "7",
         "pages": "4507-4518",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "Novel Deep Learning-Enabled LSTM Autoencoder Architecture for Discovering Anomalous Events From Intelligent Transportation Systems",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TITS.2020.3017882",
         "volume": "22",
-        "year": "2021"
+        "year": 2021
     },
     "Avatefipour2019": {
         "abstract": "",
@@ -149,12 +140,11 @@
         "journal": "IEEE Access",
         "pages": "127580-127592",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
-        "title": "An Intelligent Secured Framework for Cyberattack Detection in Electric Vehicles\u2019 CAN Bus Using Machine Learning",
+        "title": "An Intelligent Secured Framework for Cyberattack Detection in Electric Vehicles' CAN Bus Using Machine Learning",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/ACCESS.2019.2937576",
         "volume": "7",
-        "year": "2019"
+        "year": 2019
     },
     "Cheng2023": {
         "abstract": "",
@@ -165,12 +155,11 @@
         "month": "Mar",
         "pages": "266-281",
         "publisher": "Elsevier BV",
-        "series": "",
         "title": "DESC-IDS: Towards an efficient real-time automotive intrusion detection system based on deep evolving stream clustering",
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.future.2022.10.020",
         "volume": "140",
-        "year": "2023"
+        "year": 2023
     },
     "Cherdo2023": {
         "abstract": "",
@@ -182,12 +171,11 @@
         "number": "11",
         "pages": "5013",
         "publisher": "MDPI AG",
-        "series": "",
         "title": "Unsupervised Anomaly Detection for Cars CAN Sensors Time Series Using Small Recurrent and Convolutional Neural Networks",
         "type": "article",
         "url": "http://dx.doi.org/10.3390/s23115013",
         "volume": "23",
-        "year": "2023"
+        "year": 2023
     },
     "Cuzzocrea2020": {
         "abstract": "",
@@ -197,12 +185,11 @@
         "journal": "Procedia Computer Science",
         "pages": "2999-3008",
         "publisher": "Elsevier BV",
-        "series": "",
         "title": "A Deep-Learning-Based Framework for Supporting Analysis and Detection of Attacks on CAN Buses",
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.procs.2020.09.203",
         "volume": "176",
-        "year": "2020"
+        "year": 2020
     },
     "Desta2020a": {
         "abstract": "",
@@ -213,12 +200,11 @@
         "number": "0",
         "pages": "611-622",
         "publisher": "Information Processing Society of Japan",
-        "series": "",
         "title": "Long Short-Term Memory Networks for In-Vehicle Networks Intrusion Detection Using Reverse Engineered Automotive Packets",
         "type": "article",
         "url": "http://dx.doi.org/10.2197/ipsjjip.28.611",
         "volume": "28",
-        "year": "2020"
+        "year": 2020
     },
     "Desta2020b": {
         "abstract": "",
@@ -228,11 +214,10 @@
         "month": "Nov",
         "pages": "1-7",
         "publisher": "IEEE",
-        "series": "",
         "title": "MLIDS: Handling Raw High-Dimensional CAN Bus Data Using Long Short-Term Memory Networks for Intrusion Detection in In-Vehicle Networks",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/ITNAC50341.2020.9315024",
-        "year": "2020"
+        "year": 2020
     },
     "Desta2022": {
         "abstract": "",
@@ -243,12 +228,11 @@
         "month": "June",
         "pages": "100470",
         "publisher": "Elsevier BV",
-        "series": "",
         "title": "Rec-CNN: In-vehicle networks intrusion detection using convolutional neural networks trained on recurrence plots",
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.vehcom.2022.100470",
         "volume": "35",
-        "year": "2022"
+        "year": 2022
     },
     "Dixit2022": {
         "abstract": "",
@@ -260,12 +244,11 @@
         "number": "5",
         "pages": "12754",
         "publisher": "Wiley",
-        "series": "",
         "title": "Anomaly detection in autonomous electric vehicles using AI techniques: A comprehensive survey",
         "type": "article",
         "url": "http://dx.doi.org/10.1111/exsy.12754",
         "volume": "39",
-        "year": "2022"
+        "year": 2022
     },
     "Fowler2019": {
         "abstract": "",
@@ -275,11 +258,10 @@
         "month": "July",
         "pages": "1-8",
         "publisher": "IEEE",
-        "series": "",
         "title": "A Method for Constructing Automotive Cybersecurity Tests, a CAN Fuzz Testing Example",
         "type": "inproceedings",
         "url": "http://dx.doi.org/10.1109/QRS-C.2019.00015",
-        "year": "2019"
+        "year": 2019
     },
     "Han2021": {
         "abstract": "",
@@ -290,12 +272,11 @@
         "month": "Oct",
         "pages": "100374",
         "publisher": "Elsevier BV",
-        "series": "",
         "title": "PPM-InVIDS: Privacy protection model for in-vehicle intrusion detection system based complex-valued neural network",
         "type": "article",
         "url": "http://dx.doi.org/10.1016/j.vehcom.2021.100374",
         "volume": "31",
-        "year": "2021"
+        "year": 2021
     },
     "Han2023": {
         "abstract": "",
@@ -305,11 +286,10 @@
         "journal": "IEEE Transactions on Information Forensics and Security",
         "pages": "411-422",
         "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-        "series": "",
         "title": "TOW-IDS: Intrusion Detection System Based on Three Overlapped Wavelets for Automotive Ethernet",
         "type": "article",
         "url": "http://dx.doi.org/10.1109/TIFS.2022.3221893",
         "volume": "18",
-        "year": "2023"
+        "year": 2023
     }
 };
